@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="INV101" class="co.edureka.spring.core.collections.beans.Invoice">
+		<property name="invoiceNo" value="100123"/>
+		<property name="customerName" value="Sunil Joseph"/>
+		<property name="items">
+			<map>
+				<entry key="Mouse" value="10"/>
+				<entry>
+				  <key>
+				    <value>Keyboard</value>
+				  </key>
+				  <value>9</value>
+				</entry>
+				<entry value="4">
+					<key>
+						<value>Monitor</value>
+					</key>
+				</entry>
+			</map>
+		</property>
+	</bean>
+</beans>

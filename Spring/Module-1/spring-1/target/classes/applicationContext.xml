@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="user1" class="co.edureka.spring.core.model.User">
+		<property name="firstName" value="Sunil"></property>
+		<property name="lastName" value="Joseph"></property>
+	</bean>
+	
+	<bean id="user2" class="co.edureka.spring.core.model.User">
+		<property name="firstName">
+		   <value>Pankaj</value>
+		</property>
+		<property name="lastName">
+			<value>Kumar</value>
+		</property>
+	</bean>	
+	
+	<bean id="user3" class="co.edureka.spring.core.model.User"
+		p:firstName="Nagaraju" p:lastName="Prem" />
+
+<!-- 
+	<bean id="user4" class="co.edureka.spring.core.model.User">
+		<constructor-arg value="Kiran"></constructor-arg>
+		<constructor-arg value="B"></constructor-arg>
+	</bean>
+ -->
+ <!-- 
+	<bean id="user4" class="co.edureka.spring.core.model.User">
+		<constructor-arg value="Kiran" index="1"></constructor-arg>
+		<constructor-arg value="B" index="0"></constructor-arg>
+	</bean>
+ -->
+ 	<bean id="user4" class="co.edureka.spring.core.model.User">
+		<constructor-arg value="Kiran" name="lastName"></constructor-arg>
+		<constructor-arg value="B" name="firstName"></constructor-arg>
+	</bean>
+  	
+</beans>
